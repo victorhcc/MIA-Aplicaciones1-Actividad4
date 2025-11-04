@@ -1,0 +1,6 @@
+pandas
+plotly
+dash
+gunicorn # ¡Crucial para el despliegue!
+openpyxl # Si lees Excel
+json

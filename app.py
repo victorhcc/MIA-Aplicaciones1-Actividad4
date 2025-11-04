@@ -621,7 +621,9 @@ def update_age_histogram(_):
     return fig
 
 
-
+# 1. Necesitas exponer el objeto del servidor de Flask subyacente de Dash.
+# Esto es lo que Gunicorn buscará.
+server = app.server
 
 if __name__ == '__main__':  
     #app.run_server(debug=True)

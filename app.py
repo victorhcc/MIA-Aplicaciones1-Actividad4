@@ -7,9 +7,9 @@ from dash import html
 from dash.dependencies import Input, Output
 
 # --- Cargar y Preparar Datos ---
-PATH_MUERTES = 'datos_mortalidad.xlsx'
-PATH_CODIGOS = 'codigos_causas.xlsx'
-PATH_DIVIPOLA = 'divipola.xlsx'
+PATH_MUERTES = 'data/datos_mortalidad.xlsx'
+PATH_CODIGOS = 'data/codigos_causas.xlsx'
+PATH_DIVIPOLA = 'data/divipola.xlsx'
 # 1. Cargar DataFrames
 try:
     df_muertes = pd.read_excel(PATH_MUERTES)
@@ -22,7 +22,7 @@ except FileNotFoundError as e:
 print("Datos cargados exitosamente.")
 
 try:
-    with open('Colombia.geo.json', 'r') as f:
+    with open('data/Colombia.geo.json', 'r') as f:
         geojson_data = json.load(f)
 except FileNotFoundError:
     print("¡Advertencia! No se encontró 'Colombia.geo.json'. El mapa no funcionará sin este archivo.")
@@ -151,7 +151,7 @@ def categorizar_grupo_edad(codigo):
 df_final['GRUPO_EDAD_CAT'] = df_final['GRUPO_EDAD1'].apply(categorizar_grupo_edad)
 
 # Suponiendo que el archivo DANE se llama 'proyecciones_poblacion_municipal.xlsx'
-df_poblacion_raw = pd.read_excel('proyecciones_poblacion_municipal.xlsx')
+df_poblacion_raw = pd.read_excel('data/proyecciones_poblacion_municipal.xlsx')
 
 # 1. Filtrar solo los datos de 2019 --->>> No consegui los datos del 2019, entonces estoy usando datos del 2020
 print("Iniciando filtrado y preparación del DataFrame de Población...")

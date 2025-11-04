@@ -17,13 +17,16 @@ El objetivo principal es transformar datos brutos de mortalidad, codificación C
 🏗️ Estructura del Proyecto
 La aplicación utiliza un diseño de archivo único (app.py) para una ejecución sencilla, junto con los archivos de datos necesarios.
 
-Archivo,Descripción
-actividad4.py,"Contiene el código fuente completo de la aplicación Dash, incluyendo la carga de datos, el preprocesamiento, el layout y todos los callbacks de las visualizaciones."
-datos_mortalidad.xlsx,Datos detallados de las defunciones registradas en 2019.
-codigos_causas.xlsx,Nombres y códigos de las causas de muerte (CIE-10).
-divipola.xlsx,Nomenclatura oficial de códigos DANE de departamentos y municipios.
-proyecciones_poblacion.xlsx,Datos de población municipal 2019 (DANE) para el cálculo de tasas.
-Colombia.geo.json, Contiene el archivo GeoJSON necesario para la visualización del mapa coroplético.
+Archivo/Carpeta,Descripción
+app.py,"Contiene el código fuente completo de la aplicación Dash, incluyendo la carga de datos, el preprocesamiento, el layout y todos los callbacks de las visualizaciones."
+data/,"Carpeta que almacena los archivos de datos fuente (Excel, GeoJSON)."
+data/datos_mortalidad.xlsx,Datos detallados de las defunciones registradas en 2019.
+data/codigos_causas.xlsx,Nombres y códigos de las causas de muerte (CIE-10).
+data/divipola.xlsx,Nomenclatura oficial de códigos DANE de departamentos y municipios.
+data/proyecciones_poblacion.xlsx,Datos de población municipal 2019 (DANE) para el cálculo de tasas.
+assets/,Contiene el archivo GeoJSON (colombia_deptos.geojson) necesario para la visualización del mapa coroplético.
+Procfile,Archivo necesario para el despliegue en plataformas como Heroku o Render.
+requirements.txt,Lista de todas las librerías Python necesarias.
 
 📦 Requisitos
 Para ejecutar esta aplicación, necesitarás Python 3.7 o superior y las siguientes librerías instaladas:
